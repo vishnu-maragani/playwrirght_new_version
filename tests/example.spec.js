@@ -52,6 +52,6 @@ test.describe("All test cases are hlodning downside ", () => {
     await page.getByRole("button", { name: "Login" }).click();
 
     await expect(page).toHaveURL(/login/);
-    await expect(page.getByText("Your username is invalid!")).toBeVisible();
+    await expect(page.getByText("Your username is invalid!!!")).toBeVisible();
   });
 });
