@@ -1,12 +1,11 @@
 // @ts-check
-import { defineConfig, devices } from "@playwright/test";
-import { trace } from "node:console";
+const { defineConfig } = require("@playwright/test");
 
 const config = {
   testDir: "./tests",
-  timeout: 40 * 1000,
+  timeout: 30 * 1000,
   expect: {
-    timeout: 40 * 1000,
+    timeout: 5 * 1000,
   },
   reporter: "html",
   use: {

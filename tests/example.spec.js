@@ -49,9 +49,10 @@ test.describe("All test cases are hlodning downside ", () => {
     await page.goto("https://practice.expandtesting.com/login");
     await page.getByLabel("Username").fill(user.username);
     await page.getByLabel("Password").fill(user.password);
+    await page.waitForTimeout(5000);
     await page.getByRole("button", { name: "Login" }).click();
 
     await expect(page).toHaveURL(/login/);
-    await expect(page.getByText("Your username is invalid!!!")).toBeVisible();
+    await expect(page.getByText("Your username is invalid!")).toBeVisible();
   });
 });
